@@ -1,0 +1,19 @@
+{
+  "name": "catchPhrase",
+  "main": "index.js",
+  "version": "0.0.0",
+  "authors": [
+    "sakinasheikh <sfsakina@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "~1.8.3"
+  }
+}

@@ -1,0 +1,9 @@
+#answer {
+	color: white;
+}
+
+#answer:hover {
+    color: black;
+    /*background-color: #ffffff;
+    color:#000000;*/
+}

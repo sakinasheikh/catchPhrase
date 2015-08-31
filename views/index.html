@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Catch Phrase</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- jQuery -->
+    <script src="/vendor/jquery/dist/jquery.min.js"></script>
+    <!-- Underscore -->
+    <script src="/vendor/underscore/underscore-min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <!-- ToEat.ly -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <script src="/static/js/app.js"></script>
+</head>
+<body>
+  <div id="page-wrapper" class="container">
+    <header class="page-header">
+      <h1>Catch The Phrase <small>or drop it </small></h1>
+    </header>
+    <!-- form -->
+    <h4>Add a new word here</h4>
+      <form class="form-inline" id="new-phrase-form">
+        <div> 
+            <input name="word" type="text" class="form-control" id="word-input" placeholder="Word">
+        </div>
+        <div>   
+            <input name="definition" type="text" class="form-control" id="definition-input" placeholder="definition">
+        </div>
+        <div>   
+            <button type="submit" class="btn btn-default">Add New Word </button>
+        </div>
+      </form>
+        <h6>To see words definition hover the mouse over the blank space.</h6> 
+        <h6>After you have learned the word press the x on the right hand corner of the flash card to remove it.</h6>
+    <ul class="list-group" id="phrase-ul">
+    </ul>
+  </div>
+
+  <!--templet-->
+  <script type="text/template" id="word-template">
+    <div class="panel panel-default">
+      <div class="panel-heading"> 
+          <p class='panel-title'><%= word %> 
+      </div>
+          <div>
+              <span id="answer"class="panel-body"><%= definition %></span>
+
+              <!-- button w/ registered onclick function -->
+              <button data-_id="<%= _id %>" onclick="deletePhrase(this)" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </li>
+          </div>
+        </p>
+    </div>
+  </script>
+</body>
+</html>
